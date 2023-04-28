@@ -15,12 +15,18 @@ public class FuncionarioTeste {
     }
 
     @Test
-    void verificaCamposNulos(){
+    void verificaCamposNulosFuncionario(){
         Funcionario diego = null;
 
         Assertions.assertNull(null, "Usuario não encontrado");
     }
 
+    @Test
+    void verificaUsuarioFuncionarioCadastrado(){
+        Funcionario danilo = new Funcionario("Danilo", Cargo.DESENVOVEDOR);
+        Assertions.assertEquals("Danilo",danilo.getNome());
+        Assertions.assertEquals(Cargo.DESENVOVEDOR,danilo.getCargo());
+    }
 
 
 }
